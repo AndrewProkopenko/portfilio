@@ -112,15 +112,20 @@ html, body {
     margin: 50px 0 ;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     color: #fff;
 }
 .link-container i { 
     font-style: normal;
+    margin: 2px;
 }
 .link-container a { 
     color: #fff;
     transition: 300ms ease;
     position: relative;
+    margin-right: 50px;
+    margin-top: 20px;
+    white-space: nowrap;
 }
 .link-container a::after { 
     content: ' ';
@@ -138,8 +143,8 @@ html, body {
     transform: scaleX(1);
     background: rgba(255, 255, 255, 0.2);
 }
-.link-container a:first-child { 
-    margin-right: 50px;
+.link-container a:last-child { 
+    margin-right: 0px;
 }
 .link-container a:hover { 
     text-decoration: none;
