@@ -167,6 +167,9 @@ html, body {
 .bon-city { 
     background-image: url(../img/boncity.jpg);
 }
+.fengshui { 
+    background-image: url(../img/fengshui.jpg);
+}
 
 @keyframes outside-part-animation { 
     0% { 
