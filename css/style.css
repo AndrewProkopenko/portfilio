@@ -23,12 +23,18 @@ html, body {
     height: 100%;
     
 }
-.main-section h1 { 
+ h1 { 
     margin: 0;
     color: #fff; 
     font-size: 50px;
-    font-weight: 200;
-    text-align: center;
+    font-weight: 200; 
+}
+h6 {  
+    margin: 0;
+    margin-left: 5px;
+    color: rgba(255, 255, 255, 0.568); 
+    font-size: 10px;
+    font-weight: 200; 
 }
 .content-row { 
     display: flex;
@@ -64,16 +70,15 @@ html, body {
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
+    align-items: center; 
     transition: 250ms ease-in-out;
     text-align: center;
 }
 .outside-part { 
     position: absolute;
-    top: 0; 
-    width: 100%;
-    height: 100%;
+    top: 0;  
+    width: 600px;
+    height: 300px;
     border: none;
     z-index: 0;
     transition: 250ms ease-in-out;
@@ -92,26 +97,31 @@ html, body {
 .outside-part > span:nth-child(2n) { 
     background: rgba(255, 255, 255, 0.25);
 }
-.item-container:hover .image-container { 
-    transform:  translateX(-15px) translateY(-15px) ;
-    border: 2px solid #fff;  
+.item:hover .image-container { 
+    transform:  translateX(-15px) translateY(-15px) ; 
 }
-.item-container:hover .wrap-image { 
+.item:hover .wrap-image { 
     background: rgba(0, 0, 0, 0.5);
     color: rgb(219, 219, 219);
 }
-.item-container:hover .outside-part { 
-    transform:  translateX(15px) translateY(15px) ;
-    border: #fff 3px solid;
+.item:hover .outside-part { 
+    transform:  translateX(15px) translateY(15px) ; 
 }
-.item-container:hover .outside-part > span { 
+.item:hover .outside-part > span { 
     animation: outside-part-animation 3000ms linear infinite  ; 
+}
+.item.empty:hover .outside-part > span { 
+    animation: outside-part-animation 30000ms linear infinite  ;  
+}
+.item.empty .outside-part > span {  
+    opacity: 0.15;
 }
 
 .link-container { 
     margin: 50px 0 ;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
     flex-wrap: wrap;
     color: #fff;
 }
@@ -122,10 +132,12 @@ html, body {
 .link-container a { 
     color: #fff;
     transition: 300ms ease;
-    position: relative;
-    margin-right: 50px;
+    position: relative; 
     margin-top: 20px;
     white-space: nowrap;
+}
+.link-container a:nth-child(2) { 
+    margin-top: 5px ;
 }
 .link-container a::after { 
     content: ' ';
@@ -170,7 +182,21 @@ html, body {
 .fengshui { 
     background-image: url(../img/fengshui.jpg);
 }
+.bundaloo { 
+    background-image: url(../img/bundaloo.png);
+}
+.project_company { 
+    background-image: url(../img/project_company.png);
+}
+.portland { 
+    background-image: url(../img/portland.png);
+}
 
+
+
+.empty .wrap-image { 
+    font-size: 15px;
+}
 @keyframes outside-part-animation { 
     0% { 
         transform: translateX(-600px) skew(-13deg);
@@ -181,4 +207,41 @@ html, body {
     /* 100% { 
         transform: translateX(-600px) skew(-10deg);
     } */
+}
+
+.pt-100 { 
+    padding-top: 100px;
+    text-align: center;
+}
+
+.main-container { 
+    padding-bottom: 300px;
+}
+.main-container .item  { 
+    /* background: rgb(40, 214, 25); */
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 50px 0;
+    overflow: hidden;
+}
+.main-container .item a { 
+    position: relative;  
+}
+@media screen and (min-width: 768px) { 
+    .main-container {
+        /* margin-top: -100px; */
+    }
+}
+
+.col-text { 
+    color: rgba(255, 255, 255, 0.431);
+    font-size: 15px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.143);
+    padding-bottom: 5px;
+}
+.react { 
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.431);
+    font-size: 12px; 
 }
